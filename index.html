@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Combinação de Cores</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Disco Cromático Interativo</h1>
+      <button id="toggleDarkMode" title="Alternar modo claro/escuro">🌙</button>
+    </header>
+
+    <section class="controls-section">
+      <label for="baseColor">Escolha a cor base:</label>
+      <input type="color" id="baseColor" value="#ff0000" />
+
+      <label for="colorScheme">Selecione a relação:</label>
+      <select id="colorScheme">
+        <option value="complementar">Complementar</option>
+        <option value="analogous">Análoga</option>
+        <option value="monochromatic">Monocromática</option>
+        <option value="triad">Tríade</option>
+        <option value="splitComplementary">Meio-complementar</option>
+        <option value="rectangle">Retângulo</option>
+        <option value="square">Quadrado</option>
+      </select>
+    </section>
+
+    <section class="result-section">
+      <h2>Paleta Gerada:</h2>
+      <div id="resultColors" class="result-colors"></div>
+    </section>
+
+    <section class="info-section">
+      <h2>Descrição da Relação:</h2>
+      <p id="relationDescription">Escolha uma relação para ver a explicação.</p>
+    </section>
+
+    <section class="buttons-section">
+      <button id="btnClear">Limpar</button>
+      <button id="btnExport">Exportar PNG</button>
+    </section>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
